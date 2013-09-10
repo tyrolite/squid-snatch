@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<protocol name="IPv4">
+    <field name="Version" offset="0" length="4" type="TODO"/>
+    <field name="IHL" offset="4" length="4" type="TODO" descr="Internet Header Length" />
+    <field name="DSCP" offset="8" length="6" type="TODO" descr="Differentiated Services Code Point" />
+    <field name="ECN" offset="14" length="2" type="TODO" descr="Explicit Congestion Notification" />
+    <field name="TotalLength" offset="16" length="16" type="quint16"/>
+    <field name="Identification" offset="32" length="16" type="quint16"/>
+    <field name="Flags" offset="48" length="3" type="TODO">
+        <field name="RS" offset="0" length="1" type="TODO" descr="Reserved"/>
+        <field name="DF" offset="1" length="1" type="TODO" descr="Don't Fragment" />
+        <field name="MF" offset="2" length="1" type="TODO" descr="More Fragments" />
+    </field>
+    <field name="FragmentOffset" offset="51" length="13" type="TODO" descr="Fragment Offset" />
+    <field name="TTL" offset="64" length="8" type="TODO" descr="Time to Live" />
+    <field name="Protocol" offset="72" length="8" type="TODO" />
+    <field name="HeaderChecksum" offset="80" length="16" type="quint16" descr="Header Checksum" />
+    <field name="SourceIP" offset="96" length="32" type="ipv4" descr="Source IP Address" />
+    <field name="DestinationIP" offset="128" length="32" type="ipv4" descr="Destination IP Address" />
+</protocol>
